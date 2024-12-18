@@ -1,5 +1,5 @@
 {
-  "name": "games_opinion_adry",
+  "name": "sistema-cursos",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,15 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^2.0.10",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.1"
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

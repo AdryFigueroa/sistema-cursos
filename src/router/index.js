@@ -1,23 +1,29 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import OpinionsView from '../views/OpinionsView.vue';
-import AdminView from '../views/AdminView.vue';
-import NotFound from '../views/NotFound.vue';
+import Vue from 'vue'
+import Router from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import AdminPanel from '../views/AdminPanel.vue'
+import EditarCurso from '../views/EditarCurso.vue'
 
-Vue.use(VueRouter);
+Vue.use(Router)
 
-const routes = [
-  { path: '/', name: 'Home', component: HomeView },
-  { path: '/opinions/:game', name: 'Opinions', component: OpinionsView },
-  { path: '/admin', name: 'Admin', component: AdminView },
-  { path: '*', name: 'NotFound', component: NotFound },
-];
-
-const router = new VueRouter({
-  mode: 'hash',
-  base: process.env.BASE_URL,
-  routes,
-});
-
-export default router;
+export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL || '/',
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminPanel
+    },
+    {
+      path: '/editar/:id',
+      name: 'editar',
+      component: EditarCurso
+    }
+  ]
+})

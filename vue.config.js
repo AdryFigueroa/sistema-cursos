@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service');
+
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/games_opinion_adry/' : '/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/sistema-cursos/' : '/'
 });
